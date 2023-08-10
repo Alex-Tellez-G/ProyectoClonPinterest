@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+/*Estilos nav , parte superior */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 1%;
+    /*position: fixed;*/
+}
+
+/* cambiar de color cuando se pasa con el mause */
+.nav > li:hover{
+    color: red;
+}
+
+
+.nav > li{
+    list-style: none;
+    cursor: pointer;
+    padding: 1%;
+}
+
+.nav > li:nth-child(2){
+    font-weight: 600;    
+}
+.nav > li:nth-child(3){
+    font-weight: 600;       
+}
+.nav > li:nth-child(4){
+    font-weight: 600;       
+}
+.nav > li:nth-child(6){
+    font-size: 20px;
+    color: gray; 
+
+}
+.nav > li:nth-child(6):hover{
+    color: red;
+}
+.buscar{   
+    width: 70%;
+    position: relative;
+    padding: 1%;
+    
+}
+.buscar > input{
+    
+    border: 0;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: -5px;
+    padding: 1%;
+    background-color: rgba(128, 128, 128, 0.212);
+    
+}
+.buscar > input:focus{
+    outline: none;
+}
+
+.notificacion i{
+    font-size: 20px;    
+    color: #212F3C;
+    margin-top: 5px;
+}
+
+.notificacion i:hover{
+    color: rgba(0, 17, 255, 0.733);
+}
+
+.mensaje i{
+    font-size: 20px;    
+    color: #212F3C;
+    margin-top: 5px;
+}
+
+.perfil i{
+    font-size: 20px;
+    color: #212F3C;
+    margin-top: 5px;
+}
+      
+/* fin de los estilos del nav*/
+
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,250px);
+    grid-template-rows: auto;
+    justify-content: center;
+    column-gap: 15px;
+}
+
+.container > div{
+    padding: 0;
+    margin: 15px 10px;
+    border-radius: 20px;
+}
+
+.container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+@media all and(min-width: 421px) and (max-width: 768px){
+    .container{
+        grid-template-columns: repeat(auto-fill,200px);
+    }
+    .buscar{
+        display: none;
+    }
+    .nav > li:nth-child(2){
+        font-weight: 500;
+        font-size: 15px;        
+    }
+}
+
